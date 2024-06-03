@@ -46,3 +46,6 @@ echo "8AE4BE429B60A59B311C2E739823FAA60ED1E580:6:" | gpg --import-ownertrust
 ./10-openvasd.sh
 ./11-greenbone-feed-sync.sh
 ./12-gvm-tools.sh
+./13-redis.sh
+./14-permissions.sh
+./15-feed.sh
