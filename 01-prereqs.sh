@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+
 #Setting an install prefix environment variable
 export INSTALL_PREFIX=/usr/local
 

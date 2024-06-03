@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -S apt update -y
+
 ~/openvas/01-prereqs.sh
 ~/openvas/02-gvm-libs.sh
 ~/openvas/03-gvmd.sh
