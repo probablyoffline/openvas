@@ -35,14 +35,14 @@ gpg --import /tmp/GBCommunitySigningKey.asc
 
 echo "8AE4BE429B60A59B311C2E739823FAA60ED1E580:6:" | gpg --import-ownertrust
 
-./01-gvm-libs.sh
-./02-gvmd.sh
-./03-pg-gvm.sh
-./04-gsa.sh
-./05-gsad.sh
-./06-openvas-smb.sh
-./07-openvas-scanner.sh
-./08-ospd-openvas.sh
-./09-openvasd.sh
-./10-greenbone-feed-sync.sh
-./11-gvm-tools.sh
+./02-gvm-libs.sh
+./03-gvmd.sh
+./04-pg-gvm.sh
+./05-gsa.sh
+./06-gsad.sh
+./07-openvas-smb.sh
+./08-openvas-scanner.sh
+./09-ospd-openvas.sh
+./10-openvasd.sh
+./11-greenbone-feed-sync.sh
+./12-gvm-tools.sh
