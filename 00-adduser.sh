@@ -7,4 +7,4 @@ sudo useradd -r -M -U -G sudo -s /usr/sbin/nologin gvm
 sudo usermod -aG gvm $USER
 exec su $USER
 
-./01-prereq.sh
+./01-prereqs.sh
