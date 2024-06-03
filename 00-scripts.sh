@@ -516,7 +516,7 @@ TEMP_FILE=$(mktemp)
 sudo cp /etc/sudoers /etc/sudoers.bak
 
 # Add the new lines to the temporary file
-echo "%gvm ALL = NOPASSWD: /usr/local/sbin/openvas" > "$TEMP_FILE"
+sudo echo "%gvm ALL = NOPASSWD: /usr/local/sbin/openvas" > "$TEMP_FILE"
 
 sudo cat "$TEMP_FILE" >> /etc/sudoers
 
