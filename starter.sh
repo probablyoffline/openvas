@@ -5,4 +5,4 @@ sudo useradd -r -M -U -G sudo -s /usr/sbin/nologin gvm
 
 #Add current user to gvm group
 sudo usermod -aG gvm $USER
-su - $USER -c "sh -x ./00-scripts.sh"
+su - $USER -c "sh -x ~/openvas/00-scripts.sh"
