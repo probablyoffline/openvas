@@ -518,7 +518,7 @@ sudo cp /etc/sudoers /etc/sudoers.bak
 # Add the new lines to the temporary file
 sudo echo "%gvm ALL = NOPASSWD: /usr/local/sbin/openvas" > "$TEMP_FILE"
 
-sudo cat "$TEMP_FILE" >> /etc/sudoers
+sudo cat "$TEMP_FILE" | sudo tee -a /etc/sudoers
 
 # Clean up
 sudo rm "$TEMP_FILE"
