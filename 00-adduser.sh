@@ -5,4 +5,6 @@ sudo useradd -r -M -U -G sudo -s /usr/sbin/nologin gvm
 
 #Add current user to gvm group
 sudo usermod -aG gvm $USER
-su $USER
+exec su $USER
+
+./01-prereq.sh

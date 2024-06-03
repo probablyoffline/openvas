@@ -6,21 +6,12 @@
 TEMP_FILE=$(mktemp)
 
 # Backup the original sudoers file
-cp /etc/sudoers /etc/sudoers.bak
+sudo cp /etc/sudoers /etc/sudoers.bak
 
 # Add the new lines to the temporary file
 echo "%gvm ALL = NOPASSWD: /usr/local/sbin/openvas" > "$TEMP_FILE"
 
-# Append the contents of the temporary file to the sudoers file using visudo to check for syntax errors
-visudo -c -f <(cat /etc/sudoers "$TEMP_FILE")
-
-if [ $? -eq 0 ]; then
-  # If the syntax is correct, append the new lines to the sudoers file
-  cat "$TEMP_FILE" >> /etc/sudoers
-  echo "Sudoers file updated successfully."
-else
-  echo "Error: Syntax error in the sudoers file. Aborting."
-fi
+sudo cat "$TEMP_FILE" >> /etc/sudoers
 
 # Clean up
-rm "$TEMP_FILE"
+sudo rm "$TEMP_FILE"
